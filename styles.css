@@ -1,0 +1,220 @@
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Hanken;
+    src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+body {
+    font-family: Hanken, sans-serif;
+    background-color: var(--pale-blue);
+}
+
+.center {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+}
+
+.result {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    text-align: center;
+    padding: 25px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    z-index: 1;
+}
+
+.result h1 {
+    color: var(--light-lavender);
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.score {
+    color: var(--white);
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.over {
+    color: var(--light-lavender);
+    font-size: small;
+}
+
+.remark {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.9rem;
+    margin-bottom: 15px;
+}
+
+.remark-text {
+    color: var(--light-lavender);
+    font-size: 1rem;
+    text-align: center;
+    width: 200px;
+}
+
+.summary {
+    padding: 45px;
+    flex-basis: 500px;
+    background-color: var(--white);
+    border-radius: 0 25px 25px 0;
+    margin-left: -18px;
+}
+
+.summary-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.summary-info {
+    font-size: 1.15rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.summary-info:nth-child(1) {
+    background-color: hsla(0, 100%, 67%, 0.1);
+    color: var(--light-red);
+}
+
+.summary-info:nth-child(2) {
+    background-color: hsla(39, 100%, 56%, 0.1);
+    color: var(--orangey-yellow);
+}
+
+.summary-info:nth-child(3) {
+    background-color: hsla(166, 100%, 37%, 0.1);
+    color: var(--green-teal);
+}
+
+.summary-info:nth-child(4) {
+    background-color: hsla(234, 85%, 45%, 0.1);
+    color: var(--cobalt-blue);
+}
+
+.summary-info div {
+    display: flex;
+    gap: 8px;
+}
+
+.review {
+    color: var(--dark-gray-blue);
+    font-weight: 800;
+    font-size: 1.4rem;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.summary-info p span:nth-child(1) {
+    color: var(--dark-gray-blue);
+    font-weight: 700;
+}
+
+.summary-info p span:nth-child(2) {
+    color: var(--light-lavender);
+    font-weight: 700;
+}
+
+.btn {
+    background-color: var(--dark-gray-blue);
+    color: var(--light-lavender);
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    margin: 40px 0;
+    margin-bottom: -20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.btn:hover {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    color: var(--white);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        background-color: black;
+    }
+
+    .container {
+        flex-direction: column;
+        margin-bottom: 100px;
+        position: absolute;
+        top: -20px;
+    }
+
+    .result {
+        width: 300px;
+    }
+
+    .remark-text {
+        width: 250px;
+    }
+
+    div h1 {
+        margin-top: 20px;
+    }
+
+    .summary {
+        flex-basis: auto;
+        padding: 20px;
+        border-radius: 0;
+        margin-top: -30px;
+        margin-left: 0;
+    }
+
+    .review {
+        margin-top: 30px;
+    }
+
+    .btn {
+        margin-bottom: 30px;
+    }
+}
